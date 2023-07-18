@@ -4,14 +4,14 @@ import { initializeApp } from "firebase/app";
 
 import App from "./App";
 
-//! Your web app's Firebase configuration
+//! Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyARZLg6V0Tw2JtkQFhljSsIrJXUd3gCtN8",
-  authDomain: "cats-fb7f1.firebaseapp.com",
-  projectId: "cats-fb7f1",
-  storageBucket: "cats-fb7f1.appspot.com",
-  messagingSenderId: "925408765138",
-  appId: "1:925408765138:web:0b1f6cc7fcefe85277390b",
+  apiKey: "AIzaSyCxY8fcXyB57OufA1y9xr3OL4ivk8FWvFo",
+  authDomain: "ecommerceunicorns.firebaseapp.com",
+  projectId: "ecommerceunicorns",
+  storageBucket: "ecommerceunicorns.appspot.com",
+  messagingSenderId: "273077173372",
+  appId: "1:273077173372:web:444f4fb1bfdae63370ddf9",
 };
 
 //! Initialize Firebase

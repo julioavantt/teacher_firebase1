@@ -1,17 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { initializeApp } from "firebase/app";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import App from "./App";
 
 //! Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCxY8fcXyB57OufA1y9xr3OL4ivk8FWvFo",
-  authDomain: "ecommerceunicorns.firebaseapp.com",
-  projectId: "ecommerceunicorns",
-  storageBucket: "ecommerceunicorns.appspot.com",
-  messagingSenderId: "273077173372",
-  appId: "1:273077173372:web:444f4fb1bfdae63370ddf9",
+  apiKey: "AIzaSyCtMxi5VMngsaPWYpGU2ctO3KjemJF8gMg",
+  authDomain: "coder-avantt.firebaseapp.com",
+  projectId: "coder-avantt",
+  storageBucket: "coder-avantt.appspot.com",
+  messagingSenderId: "53496753971",
+  appId: "1:53496753971:web:42609e79f191f7fa711846",
 };
 
 //! Initialize Firebase

@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 
+//import { getFirestore, getDoc, doc } from "firebase/firestore";
+//import { getFirestore, getDocs, collection } from "firebase/firestore";
+
 import {
   getFirestore,
-  //  getDoc,
+  getDoc,
   doc,
   updateDoc,
   collection,
@@ -25,20 +28,20 @@ import {
 function App() {
   //! documento by id
 
-  /*   useEffect(() => {
+  useEffect(() => {
     const db = getFirestore();
 
-    const refDoc = doc(db, "items", "RVuV0wBrK5aJ9ryOsKd0");
+    const refDoc = doc(db, "productitos", "WtQvfOx6urqr1iAJU3dp");
 
     getDoc(refDoc).then((snapshot) => {
       console.log({ id: snapshot.id, ...snapshot.data() });
     });
-  }, []); */
+  }, []);
 
-  /*   useEffect(() => {
+  /* useEffect(() => {
     const db = getFirestore();
 
-    const refCollection = collection(db, "items");
+    const refCollection = collection(db, "productitos");
 
     getDocs(refCollection).then((snapshot) => {
       if (snapshot.size === 0) console.log("no results");
@@ -49,14 +52,14 @@ function App() {
           })
         );
     });
-  }, []); */
+  }, []);
 
   useEffect(() => {
     const db = getFirestore();
 
     const q = query(
-      collection(db, "items"),
-      where("category", "==", "gorra"),
+      collection(db, "productitos"),
+      where("categoryId", "!=", "ropa"),
       limit(1)
     );
 
@@ -69,42 +72,7 @@ function App() {
           })
         );
     });
-  }, []);
-
-  const sendOrder = () => {
-    const order = {
-      buyer: {
-        name: "Julio",
-        phone: 33333,
-        email: "fweewefff",
-      },
-      items: [
-        { name: "bicicleta", price: 200 },
-        { name: "gorra", price: 2000 },
-      ],
-      total: 1000,
-    };
-
-    const db = getFirestore();
-    const orderCollection = collection(db, "orders");
-
-    addDoc(orderCollection, order).then(({ id }) =>
-      console.log("orden con id" + id + " creada!")
-    );
-  };
-
-  const updateOrder = () => {
-    const db = getFirestore();
-    const orderDoc = doc(db, "orders", "fhth6fIh3MsWqfAe6ovv");
-    updateDoc(orderDoc, { total: 333331 });
-  };
-
-  return (
-    <div>
-      TEST FIREBASE<button onClick={sendOrder}>ENVIAR ORDEN</button>
-      <button onClick={updateOrder}>ACTUALIZAR ORDEN</button>
-    </div>
-  );
+  }, []); */
 }
 
 export default App;
